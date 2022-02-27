@@ -1,0 +1,17 @@
+D:\classes\Intro-api\WebAPIClient2\bin\Debug\net6.0\WebAPIClient2.exe
+D:\classes\Intro-api\WebAPIClient2\bin\Debug\net6.0\WebAPIClient2.deps.json
+D:\classes\Intro-api\WebAPIClient2\bin\Debug\net6.0\WebAPIClient2.runtimeconfig.json
+D:\classes\Intro-api\WebAPIClient2\bin\Debug\net6.0\WebAPIClient2.dll
+D:\classes\Intro-api\WebAPIClient2\bin\Debug\net6.0\ref\WebAPIClient2.dll
+D:\classes\Intro-api\WebAPIClient2\bin\Debug\net6.0\WebAPIClient2.pdb
+D:\classes\Intro-api\WebAPIClient2\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\classes\Intro-api\WebAPIClient2\obj\Debug\net6.0\WebAPIClient2.csproj.AssemblyReference.cache
+D:\classes\Intro-api\WebAPIClient2\obj\Debug\net6.0\WebAPIClient2.GeneratedMSBuildEditorConfig.editorconfig
+D:\classes\Intro-api\WebAPIClient2\obj\Debug\net6.0\WebAPIClient2.AssemblyInfoInputs.cache
+D:\classes\Intro-api\WebAPIClient2\obj\Debug\net6.0\WebAPIClient2.AssemblyInfo.cs
+D:\classes\Intro-api\WebAPIClient2\obj\Debug\net6.0\WebAPIClient2.csproj.CoreCompileInputs.cache
+D:\classes\Intro-api\WebAPIClient2\obj\Debug\net6.0\WebAPIClient2.csproj.CopyComplete
+D:\classes\Intro-api\WebAPIClient2\obj\Debug\net6.0\WebAPIClient2.dll
+D:\classes\Intro-api\WebAPIClient2\obj\Debug\net6.0\ref\WebAPIClient2.dll
+D:\classes\Intro-api\WebAPIClient2\obj\Debug\net6.0\WebAPIClient2.pdb
+D:\classes\Intro-api\WebAPIClient2\obj\Debug\net6.0\WebAPIClient2.genruntimeconfig.cache
