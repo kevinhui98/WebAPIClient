@@ -50,7 +50,7 @@ namespace WebAPIClient
                     }
                     //issues with getting cryto name. 
                     //after submitting btc or btc-usd both said incorrect crypto
-                    var result = await client.GetAsync("https://api.cryptonator.com/api/full/" + cryptoName);
+                    var result = await client.GetAsync("https://api.cryptonator.com/api/full/" + cryptoName + "-usd");
                     var resultRead = await result.Content.ReadAsStringAsync();
 
                     var crypto = JsonConvert.DeserializeObject<crypto>(resultRead);
