@@ -28,8 +28,6 @@ namespace WebAPIClient
                     {
                         break;
                     }
-                    //issues with getting cryto name. 
-                    //after submitting btc or btc-usd both said incorrect crypto
                     var result = await client.GetAsync("https://api.genderize.io/?name=" + genderName.ToLower());
                     var resultRead = await result.Content.ReadAsStringAsync();
 
@@ -44,7 +42,7 @@ namespace WebAPIClient
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("ERROR invalid crypto!!");
+                    Console.WriteLine("ERROR invalid name!!");
                     break; 
                 }
             }
