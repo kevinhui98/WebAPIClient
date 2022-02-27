@@ -6,27 +6,7 @@ using System.Collections.Generic;
 
 namespace WebAPIClient
 {
-    class crypto
-    {
-        [JsonProperty("base")]
-        public string Base { get; set; }
-        [JsonProperty("price")]
-        public string Price { get; set; }
-        public List<Markets> Markets { get; set; }
-    }
-    public class Marketname
-    {
-        [JsonProperty("market")]
-        public string Market { get; set; }
-        [JsonProperty("price")]
-        public string price { get; set; }
-
-    }
-    public class Markets
-    {
-        [JsonProperty("market")]
-        public Marketname Market; 
-    }
+   
     class MainClass
     {
         private static readonly HttpClient client = new HttpClient();
@@ -42,34 +22,43 @@ namespace WebAPIClient
             {
                 try
                 {
-                    Console.WriteLine("Enter crypto name. ");
-                    var cryptoName = Console.ReadLine();
-                    if (cryptoName == null)
+                    Console.WriteLine("Enter a name. ");
+                    var genderName = Console.ReadLine();
+                    if (genderName == null)
                     {
                         break;
                     }
                     //issues with getting cryto name. 
                     //after submitting btc or btc-usd both said incorrect crypto
-                    var result = await client.GetAsync("https://api.cryptonator.com/api/full/" + cryptoName + "-usd");
+                    var result = await client.GetAsync("https://api.genderize.io/?name=" + genderName.ToLower());
                     var resultRead = await result.Content.ReadAsStringAsync();
 
-                    var crypto = JsonConvert.DeserializeObject<crypto>(resultRead);
+                    var sex = JsonConvert.DeserializeObject<sex>(resultRead);
 
                     Console.WriteLine("---");
-                    Console.WriteLine("CryptoCurrency: " + crypto.Base);
-                    Console.WriteLine("Price: " + crypto.Price);
-                    Console.WriteLine("Market(s): ");
-                    //trying to print multiple items from markets
-                    crypto.Markets.ForEach(t =>
-                        //Console.WriteLine(t.Marketname.market);
-                        Console.WriteLine(t.Market.Market));
+                    Console.WriteLine("Name: " + sex.name);
+                    Console.WriteLine("Gender: " + sex.gender);
+                    Console.WriteLine("Probability: " + sex.probability);
+                    Console.WriteLine("Count: " + sex.count);
                     Console.WriteLine("\n---");
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
                     Console.WriteLine("ERROR invalid crypto!!");
+                    break; 
                 }
             }
         }
+    }
+    class sex
+    {
+        [JsonProperty("name")]
+        public string name { get; set; }
+        [JsonProperty("gender")]
+        public string gender { get; set; }
+        [JsonProperty("probability")]
+        public string probability { get; set; }
+        [JsonProperty("count")]
+        public string count { get; set; }
     }
 }
